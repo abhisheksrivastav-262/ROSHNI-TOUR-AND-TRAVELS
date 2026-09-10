@@ -15,6 +15,7 @@ import {
   Users,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { FareCheckWidget } from "@/components/site/FareCheckWidget";
 import heroImage from "@/assets/hero-ujjain.jpg";
 import mahakalImage from "@/assets/mahakal.jpg";
 import omkareshwarImage from "@/assets/omkareshwar.jpg";
@@ -131,6 +132,9 @@ function HomePage() {
           <ChevronDown className="size-4 animate-bounce" />
         </div>
       </section>
+
+      {/* BOOKING / FARE CHECK WIDGET — directly below hero */}
+      <FareCheckWidget />
 
       {/* HIGHLIGHTS */}
       <section className="border-b border-brand-gold/30 bg-brand-ivory" aria-label="Travel highlights">
