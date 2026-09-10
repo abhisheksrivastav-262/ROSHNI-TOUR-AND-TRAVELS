@@ -1,0 +1,3 @@
+- [ ] Build Roshni single-page travel website with premium responsive layout
+- [ ] Add working call, WhatsApp enquiry, navigation, mobile menu, and directions actions
+- [ ] Add route metadata, favicon, and verify desktop/mobile rendering
