@@ -1,9 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, CarFront } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import familyImage from "@/assets/family-travel.jpg";
-import fleetImage from "@/assets/taxi-fleet.jpg";
-import heroImage from "@/assets/hero-ujjain.jpg";
+import familyMpvImage from "@/assets/family-mpv.jpg";
+import suvImage from "@/assets/suv-grey.jpg";
+import sedanImage from "@/assets/sedan-indigo.jpg";
+import swiftImage from "@/assets/swift-hatchback.jpg";
+import yellowTaxiImage from "@/assets/yellow-taxi.jpg";
 import { PageHero } from "@/components/site/PageHero";
 
 export const Route = createFileRoute("/vehicles")({
@@ -23,12 +25,12 @@ export const Route = createFileRoute("/vehicles")({
 });
 
 const VEHICLES = [
-  { title: "SUV", availability: "AC / Non-AC availability", use: "लंबी दूरी और परिवार के लिए — spacious और आरामदायक", alt: "SUV taxi", image: fleetImage },
-  { title: "SEDAN", availability: "AC / Non-AC availability", use: "शहर और outstation travel के लिए comfortable विकल्प", alt: "Sedan taxi", image: heroImage },
-  { title: "HATCHBACK", availability: "AC / Non-AC availability", use: "किफायती local travel — छोटी दूरी के लिए", alt: "Hatchback taxi", image: fleetImage },
-  { title: "FAMILY CAR", availability: "AC / Non-AC availability", use: "परिवार और group यात्रियों के लिए उपयुक्त", alt: "Family car taxi", image: familyImage },
-  { title: "AC VEHICLES", availability: "आरामदायक सफर", use: "गर्मियों और लंबी यात्रा के लिए AC आराम", alt: "AC vehicle", image: heroImage },
-  { title: "NON-AC VEHICLES", availability: "सुविधाजनक विकल्प", use: "बजट के अनुसार यात्रा — सुविधाजनक सफर", alt: "Non-AC vehicle", image: fleetImage },
+  { title: "SUV", availability: "AC / Non-AC availability", use: "लंबी दूरी और परिवार के लिए — spacious और आरामदायक", alt: "SUV taxi", image: suvImage },
+  { title: "SEDAN", availability: "AC / Non-AC availability", use: "शहर और outstation travel के लिए comfortable विकल्प", alt: "Sedan taxi", image: sedanImage },
+  { title: "HATCHBACK", availability: "AC / Non-AC availability", use: "किफायती local travel — छोटी दूरी के लिए (Swift / Similar)", alt: "Hatchback taxi", image: swiftImage },
+  { title: "FAMILY CAR", availability: "AC / Non-AC availability", use: "परिवार और group यात्रियों के लिए उपयुक्त", alt: "Family car taxi", image: familyMpvImage },
+  { title: "AC VEHICLES", availability: "आरामदायक सफर", use: "गर्मियों और लंबी यात्रा के लिए AC आराम", alt: "AC vehicle", image: yellowTaxiImage },
+  { title: "NON-AC VEHICLES", availability: "सुविधाजनक विकल्प", use: "बजट के अनुसार यात्रा — सुविधाजनक सफर", alt: "Non-AC vehicle", image: sedanImage },
 ];
 
 function VehiclesPage() {
@@ -39,8 +41,8 @@ function VehiclesPage() {
         title="आपकी यात्रा, आपकी गाड़ी"
         hindi="SUV • Sedan • Hatchback • Family Car — AC / Non-AC विकल्प"
         description="यात्रियों की संख्या और आराम के अनुसार वाहन चुनें। Book Now दबाकर WhatsApp पर vehicle preference भेजें।"
-        image={fleetImage}
-        imageAlt="Fleet of taxis for Ujjain travel"
+        image={familyMpvImage}
+        imageAlt="Family MPV and cars for Ujjain travel"
       >
         <Button asChild variant="brand" size="lg">
           <Link to="/book-now">
@@ -57,14 +59,14 @@ function VehiclesPage() {
                 key={title}
                 className="group border border-brand-gold/35 bg-brand-cream p-3 transition-transform hover:-translate-y-1"
               >
-                <div className="relative aspect-[1.45/1] overflow-hidden">
+                <div className="relative aspect-[1.45/1] overflow-hidden bg-white">
                   <img
                     src={image}
                     alt={`${alt} category`}
                     width={1200}
                     height={900}
                     loading="lazy"
-                    className="size-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="size-full object-contain transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
                 <div className="px-2 pb-2 pt-5">

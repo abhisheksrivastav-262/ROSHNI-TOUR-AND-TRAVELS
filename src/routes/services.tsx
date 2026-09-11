@@ -9,12 +9,14 @@ import {
   Users,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-ujjain.jpg";
-import mahakalImage from "@/assets/mahakal.jpg";
-import omkareshwarImage from "@/assets/omkareshwar.jpg";
-import fleetImage from "@/assets/taxi-fleet.jpg";
-import highwayImage from "@/assets/highway.jpg";
-import familyImage from "@/assets/family-travel.jpg";
+import mahakalTempleImage from "@/assets/mahakal-temple.jpg";
+import omkareshwarGhatImage from "@/assets/omkareshwar-ghat.jpg";
+import yellowTaxiImage from "@/assets/yellow-taxi.jpg";
+import sedanImage from "@/assets/sedan-indigo.jpg";
+import suvImage from "@/assets/suv-grey.jpg";
+import highwayCarsImage from "@/assets/highway-cars.jpg";
+import familyMpvImage from "@/assets/family-mpv.jpg";
+import swiftImage from "@/assets/swift-hatchback.jpg";
 import { PageHero } from "@/components/site/PageHero";
 
 export const Route = createFileRoute("/services")({
@@ -37,49 +39,49 @@ const SERVICES = [
   {
     title: "Ujjain Darshan",
     desc: "उज्जैन के प्रमुख धार्मिक एवं दर्शनीय स्थलों के लिए सुविधाजनक टैक्सी सेवा। Mahakal Temple सहित local धार्मिक स्थल।",
-    image: mahakalImage,
+    image: mahakalTempleImage,
     Icon: Sparkles,
   },
   {
     title: "Ujjain to Omkareshwar Taxi",
     desc: "उज्जैन से ओंकारेश्वर के लिए आरामदायक one-way और round-trip टैक्सी — परिवार और ग्रुप के लिए उपयुक्त।",
-    image: omkareshwarImage,
+    image: omkareshwarGhatImage,
     Icon: Compass,
   },
   {
     title: "AC Taxi Service",
     desc: "गर्मी और लंबी दूरी के लिए आरामदायक AC गाड़ियाँ — family travel के लिए सही विकल्प।",
-    image: heroImage,
+    image: yellowTaxiImage,
     Icon: CarFront,
   },
   {
     title: "Non-AC Taxi Service",
     desc: "बजट के अनुसार किफायती और सुविधाजनक Non-AC वाहन विकल्प।",
-    image: fleetImage,
+    image: sedanImage,
     Icon: CarFront,
   },
   {
     title: "Local Ujjain Sightseeing",
     desc: "उज्जैन और आसपास के प्रमुख स्थानों की यात्रा के लिए स्थानीय टैक्सी सुविधा।",
-    image: mahakalImage,
+    image: swiftImage,
     Icon: MapPin,
   },
   {
     title: "Outstation Taxi",
     desc: "उज्जैन से अन्य शहरों और destinations के लिए comfortable outstation travel।",
-    image: highwayImage,
+    image: highwayCarsImage,
     Icon: ArrowRight,
   },
   {
     title: "Family & Group Travel",
     desc: "परिवार और ग्रुप यात्रियों के लिए उपयुक्त spacious वाहन विकल्प।",
-    image: familyImage,
+    image: familyMpvImage,
     Icon: Users,
   },
   {
     title: "24/7 Vehicle Availability",
     desc: "आपकी यात्रा जरूरत के अनुसार 24 घंटे वाहन उपलब्ध — दिन हो या रात।",
-    image: heroImage,
+    image: suvImage,
     Icon: Clock3,
   },
 ];
@@ -92,8 +94,8 @@ function ServicesPage() {
         title="हर यात्रा के लिए सही सेवा"
         hindi="उज्जैन दर्शन से ओंकारेश्वर तक — AC / Non-AC टैक्सी, 24 घंटे उपलब्ध"
         description="अपनी सेवा चुनें और Book Now पर क्लिक करके WhatsApp पर booking enquiry भेजें।"
-        image={highwayImage}
-        imageAlt="Taxi services across Madhya Pradesh highways"
+        image={highwayCarsImage}
+        imageAlt="Cars on highway for taxi services across Madhya Pradesh"
       >
         <Button asChild variant="brand" size="lg">
           <Link to="/book-now">

@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Check, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import familyImage from "@/assets/family-travel.jpg";
-import highwayImage from "@/assets/highway.jpg";
-import mahakalImage from "@/assets/mahakal.jpg";
+import familyMpvImage from "@/assets/family-mpv.jpg";
+import mahakalTempleImage from "@/assets/mahakal-temple.jpg";
+import omkareshwarGhatImage from "@/assets/omkareshwar-ghat.jpg";
 import { PageHero } from "@/components/site/PageHero";
 import { PHONE_PRIMARY, whatsappUrl } from "@/lib/site";
 
@@ -43,7 +43,7 @@ function AboutPage() {
         title="उज्जैन की यात्रा, भरोसे के साथ"
         hindi="UJJAIN TAXI TOUR AND TRAVELS — आपकी धार्मिक और पारिवारिक यात्राओं का साथी"
         description="उज्जैन से शुरू होने वाली यात्राओं के लिए AC और Non-AC गाड़ियों की सुविधा। सरल बुकिंग — फोन या WhatsApp पर।"
-        image={familyImage}
+        image={familyMpvImage}
         imageAlt="Family travelling comfortably with Ujjain Taxi Tour and Travels"
       >
         <Button asChild variant="brand" size="lg">
@@ -94,8 +94,8 @@ function AboutPage() {
             </div>
           </div>
           <div className="grid gap-5">
-            <img src={mahakalImage} alt="Mahakaleshwar Temple Ujjain" width={1200} height={900} loading="lazy" className="aspect-[16/10] w-full object-cover" />
-            <img src={highwayImage} alt="Highway travel in Madhya Pradesh" width={1200} height={900} loading="lazy" className="aspect-[16/10] w-full object-cover" />
+            <img src={mahakalTempleImage} alt="Mahakaleshwar Temple Ujjain" width={1200} height={900} loading="lazy" className="aspect-[16/10] w-full object-cover" />
+            <img src={omkareshwarGhatImage} alt="Omkareshwar ghats and Narmada river" width={1200} height={900} loading="lazy" className="aspect-[16/10] w-full object-cover" />
           </div>
         </div>
       </section>

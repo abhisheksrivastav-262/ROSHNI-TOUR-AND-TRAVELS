@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Phone } from "lucide-react";
 import { BookingForm } from "@/components/site/BookingForm";
 import { PHONE_PRIMARY } from "@/lib/site";
-import highwayImage from "@/assets/highway.jpg";
+import highwayCarsImage from "@/assets/highway-cars.jpg";
 
 export const Route = createFileRoute("/book-now")({
   head: () => ({
@@ -25,7 +25,7 @@ function BookNowPage() {
     <main className="pt-[74px]">
       <section className="relative isolate overflow-hidden bg-brand-brown px-4 pb-14 pt-16 text-brand-ivory sm:px-8 lg:px-12 lg:pt-20">
         <img
-          src={highwayImage}
+          src={highwayCarsImage}
           alt="Book taxi for Ujjain and Omkareshwar travel"
           width={1600}
           height={900}

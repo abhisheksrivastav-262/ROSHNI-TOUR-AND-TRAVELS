@@ -10,7 +10,7 @@ import {
   directionsUrl,
   whatsappUrl,
 } from "@/lib/site";
-import highwayImage from "@/assets/highway.jpg";
+import omkareshwarGhatImage from "@/assets/omkareshwar-ghat.jpg";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -36,7 +36,7 @@ function ContactPage() {
         title="संपर्क करें"
         hindi="आपका अगला सफर यहीं से शुरू होता है"
         description="उज्जैन, ओंकारेश्वर और आगे की यात्रा के लिए UJJAIN TAXI TOUR AND TRAVELS से संपर्क करें।"
-        image={highwayImage}
+        image={omkareshwarGhatImage}
         imageAlt="Contact Ujjain Taxi Tour and Travels for taxi booking"
       />
 

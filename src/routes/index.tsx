@@ -16,12 +16,13 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { FareCheckWidget } from "@/components/site/FareCheckWidget";
-import heroImage from "@/assets/hero-ujjain.jpg";
-import mahakalImage from "@/assets/mahakal.jpg";
-import omkareshwarImage from "@/assets/omkareshwar.jpg";
-import fleetImage from "@/assets/taxi-fleet.jpg";
-import highwayImage from "@/assets/highway.jpg";
-import familyImage from "@/assets/family-travel.jpg";
+import heroTempleImage from "@/assets/mahakal-temple.jpg";
+import omkareshwarGhatImage from "@/assets/omkareshwar-ghat.jpg";
+import yellowTaxiImage from "@/assets/yellow-taxi.jpg";
+import sedanImage from "@/assets/sedan-indigo.jpg";
+import suvImage from "@/assets/suv-grey.jpg";
+import highwayCarsImage from "@/assets/highway-cars.jpg";
+import familyMpvImage from "@/assets/family-mpv.jpg";
 import {
   ADDRESS,
   PHONE_PRIMARY,
@@ -53,10 +54,10 @@ export const Route = createFileRoute("/")({
 });
 
 const SERVICES_PREVIEW = [
-  ["उज्जैन दर्शन", "उज्जैन के प्रमुख धार्मिक एवं दर्शनीय स्थलों के लिए सुविधाजनक टैक्सी सेवा।", mahakalImage],
-  ["उज्जैन से ओंकारेश्वर", "उज्जैन से ओंकारेश्वर के लिए आरामदायक और सुविधाजनक टैक्सी यात्रा।", omkareshwarImage],
-  ["AC TAXI SERVICE", "आरामदायक AC गाड़ियों के साथ परिवार और यात्रियों के लिए सुविधाजनक सफर।", heroImage],
-  ["NON AC TAXI SERVICE", "किफायती और सुविधाजनक Non-AC वाहन विकल्प।", fleetImage],
+  ["उज्जैन दर्शन", "उज्जैन के प्रमुख धार्मिक एवं दर्शनीय स्थलों के लिए सुविधाजनक टैक्सी सेवा।", heroTempleImage],
+  ["उज्जैन से ओंकारेश्वर", "उज्जैन से ओंकारेश्वर के लिए आरामदायक और सुविधाजनक टैक्सी यात्रा।", omkareshwarGhatImage],
+  ["AC TAXI SERVICE", "आरामदायक AC गाड़ियों के साथ परिवार और यात्रियों के लिए सुविधाजनक सफर।", yellowTaxiImage],
+  ["NON AC TAXI SERVICE", "किफायती और सुविधाजनक Non-AC वाहन विकल्प।", sedanImage],
 ] as const;
 
 function HomePage() {
@@ -65,8 +66,8 @@ function HomePage() {
       {/* HERO */}
       <section className="relative isolate flex min-h-[760px] items-end overflow-hidden bg-brand-brown pt-[74px] lg:min-h-[820px]">
         <img
-          src={heroImage}
-          alt="Premium taxi travelling through Madhya Pradesh near a temple"
+          src={heroTempleImage}
+          alt="Mahakaleshwar Temple and Mahakal in Ujjain"
           width={1600}
           height={1000}
           className="absolute inset-0 -z-20 size-full object-cover object-[65%_center]"
@@ -164,8 +165,8 @@ function HomePage() {
           <div className="relative order-2 lg:order-1">
             <div className="absolute -left-5 -top-5 h-32 w-32 border-l border-t border-brand-gold/60" />
             <img
-              src={familyImage}
-              alt="Family preparing for a pilgrimage journey beside a taxi"
+              src={familyMpvImage}
+              alt="Family with spacious MPV car for comfortable travel"
               width={1200}
               height={900}
               loading="lazy"
@@ -268,13 +269,13 @@ function HomePage() {
           </div>
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              ["SUV", "लंबी दूरी और परिवार के लिए", fleetImage],
-              ["SEDAN", "शहर और outstation travel", heroImage],
-              ["FAMILY CAR", "परिवार और group यात्रियों के लिए", familyImage],
+              ["SUV", "लंबी दूरी और परिवार के लिए", suvImage],
+              ["SEDAN", "शहर और outstation travel", sedanImage],
+              ["FAMILY CAR", "परिवार और group यात्रियों के लिए", familyMpvImage],
             ].map(([title, use, image]) => (
               <article key={title} className="group border border-brand-gold/35 bg-brand-cream p-3 transition-transform hover:-translate-y-1">
-                <div className="relative aspect-[1.45/1] overflow-hidden">
-                  <img src={image} alt={`${title} taxi category`} width={1200} height={900} loading="lazy" className="size-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div className="relative aspect-[1.45/1] overflow-hidden bg-white">
+                  <img src={image} alt={`${title} taxi category`} width={1200} height={900} loading="lazy" className="size-full object-contain transition-transform duration-700 group-hover:scale-105" />
                 </div>
                 <div className="px-2 pb-2 pt-5">
                   <div className="flex items-start justify-between gap-3">
@@ -303,7 +304,7 @@ function HomePage() {
 
       {/* DARSHAN */}
       <section className="relative isolate min-h-[560px] overflow-hidden bg-brand-brown px-4 py-20 text-brand-ivory sm:px-8 lg:px-12 lg:py-28">
-        <img src={mahakalImage} alt="Mahakaleshwar Temple in Ujjain at sunrise" width={1200} height={900} loading="lazy" className="absolute inset-0 -z-20 size-full object-cover object-center" />
+        <img src={heroTempleImage} alt="Mahakaleshwar Temple and Mahakal in Ujjain" width={1200} height={900} loading="lazy" className="absolute inset-0 -z-20 size-full object-cover object-center" />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,var(--brand-brown)_8%,color-mix(in_oklab,var(--brand-brown)_74%,transparent)_55%,transparent)]" />
         <div className="mx-auto flex w-full max-w-[1240px] items-center">
           <div className="max-w-xl">
@@ -331,7 +332,7 @@ function HomePage() {
       <section className="bg-brand-cream px-4 py-20 sm:px-8 lg:px-12 lg:py-28">
         <div className="mx-auto grid w-full max-w-[1240px] items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
           <div className="relative">
-            <img src={omkareshwarImage} alt="Omkareshwar Temple and Narmada river pilgrimage scene" width={1200} height={900} loading="lazy" className="aspect-[4/3] w-full object-cover" />
+            <img src={omkareshwarGhatImage} alt="Omkareshwar ghats and Narmada river pilgrimage scene" width={1200} height={900} loading="lazy" className="aspect-[4/3] w-full object-cover" />
             <span className="absolute -bottom-4 left-4 bg-brand-gold px-5 py-4 font-display text-xs font-extrabold uppercase tracking-[0.1em] text-brand-brown">
               Ujjain → Omkareshwar
             </span>
@@ -423,8 +424,8 @@ function HomePage() {
           </div>
           <div className="relative overflow-hidden">
             <img
-              src={highwayImage}
-              alt="Scenic Madhya Pradesh highway for outstation travel"
+              src={highwayCarsImage}
+              alt="Cars on highway for comfortable outstation travel"
               width={1200}
               height={900}
               loading="lazy"

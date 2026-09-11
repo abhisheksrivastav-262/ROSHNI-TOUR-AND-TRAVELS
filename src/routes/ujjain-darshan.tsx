@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Check, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import mahakalImage from "@/assets/mahakal.jpg";
-import familyImage from "@/assets/family-travel.jpg";
+import mahakalTempleImage from "@/assets/mahakal-temple.jpg";
+import familyMpvImage from "@/assets/family-mpv.jpg";
 import { PageHero } from "@/components/site/PageHero";
 import { PHONE_PRIMARY, whatsappUrl } from "@/lib/site";
 
@@ -30,8 +30,8 @@ function UjjainDarshanPage() {
         title="उज्जैन दर्शन"
         hindi="श्रद्धा, सुविधा और आराम के साथ उज्जैन दर्शन"
         description="Mahakal Temple और उज्जैन के धार्मिक स्थलों तक comfortable taxi — परिवार के साथ, AC / Non-AC वाहनों में, 24 घंटे उपलब्धता के साथ।"
-        image={mahakalImage}
-        imageAlt="Mahakaleshwar Temple in Ujjain at sunrise"
+        image={mahakalTempleImage}
+        imageAlt="Mahakaleshwar Temple and Mahakal in Ujjain"
       >
         <Button asChild variant="brand" size="lg">
           <Link to="/book-now">
@@ -91,12 +91,12 @@ function UjjainDarshanPage() {
           </div>
           <div className="relative">
             <img
-              src={familyImage}
-              alt="Family on Ujjain Darshan pilgrimage trip"
+              src={familyMpvImage}
+              alt="Family MPV car for comfortable Ujjain Darshan trip"
               width={1200}
               height={900}
               loading="lazy"
-              className="aspect-[4/3] w-full object-cover"
+              className="aspect-[4/3] w-full bg-white object-contain"
             />
             <span className="absolute -bottom-4 left-4 bg-brand-brown px-5 py-4 font-display text-xs font-extrabold uppercase tracking-[0.1em] text-brand-gold">
               Ujjain Darshan • 24/7 Taxi

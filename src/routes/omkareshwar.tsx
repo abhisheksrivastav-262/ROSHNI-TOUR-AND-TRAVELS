@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Check, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import omkareshwarImage from "@/assets/omkareshwar.jpg";
-import highwayImage from "@/assets/highway.jpg";
+import omkareshwarGhatImage from "@/assets/omkareshwar-ghat.jpg";
+import highwayCarsImage from "@/assets/highway-cars.jpg";
 import { PageHero } from "@/components/site/PageHero";
 import { PHONE_PRIMARY, whatsappUrl } from "@/lib/site";
 
@@ -30,8 +30,8 @@ function OmkareshwarPage() {
         title="उज्जैन से ओंकारेश्वर"
         hindi="धार्मिक यात्रा के लिए आरामदायक और भरोसेमंद टैक्सी सेवा"
         description="Narmada तट पर स्थित ओंकारेश्वर ज्योतिर्लिंग तक comfortable journey — AC / Non-AC, family & group travel, 24 घंटे उपलब्धता।"
-        image={omkareshwarImage}
-        imageAlt="Omkareshwar Temple and Narmada river"
+        image={omkareshwarGhatImage}
+        imageAlt="Omkareshwar ghats and Narmada river"
       >
         <Button asChild variant="brand" size="lg">
           <Link to="/book-now">
@@ -56,7 +56,7 @@ function OmkareshwarPage() {
         <div className="mx-auto grid w-full max-w-[1240px] items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
           <div className="relative">
             <img
-              src={highwayImage}
+              src={highwayCarsImage}
               alt="Comfortable highway journey from Ujjain to Omkareshwar"
               width={1200}
               height={900}
