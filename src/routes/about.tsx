@@ -94,7 +94,7 @@ function AboutPage() {
             </div>
           </div>
           <div className="grid gap-5">
-            <img src={mahakalTempleImage} alt="Mahakaleshwar Temple Ujjain" width={1200} height={900} loading="lazy" className="aspect-[16/10] w-full object-cover" />
+            <img src={mahakalTempleImage} alt="Mahakaleshwar Temple Ujjain" width={1200} height={900} loading="lazy" className="aspect-[16/9] w-full object-cover" />
             <img src={omkareshwarGhatImage} alt="Omkareshwar ghats and Narmada river" width={1200} height={900} loading="lazy" className="aspect-[16/10] w-full object-cover" />
           </div>
         </div>

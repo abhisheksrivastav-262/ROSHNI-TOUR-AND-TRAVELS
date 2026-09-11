@@ -70,7 +70,7 @@ function HomePage() {
           alt="Mahakaleshwar Temple and Mahakal in Ujjain"
           width={1600}
           height={1000}
-          className="absolute inset-0 -z-20 size-full object-cover object-[65%_center]"
+          className="absolute inset-0 -z-20 size-full object-cover object-[28%_center] md:object-[60%_center]"
         />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,var(--brand-brown),color-mix(in_oklab,var(--brand-brown)_64%,transparent)_44%,color-mix(in_oklab,var(--brand-brown)_12%,transparent))]" />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(0deg,var(--brand-brown)_0%,transparent_58%)]" />
@@ -228,6 +228,7 @@ function HomePage() {
                     width={1200}
                     height={900}
                     loading="lazy"
+                    style={title === "उज्जैन दर्शन" ? { objectPosition: "68% 50%" } : undefined}
                     className="size-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-[linear-gradient(0deg,var(--brand-brown),transparent_70%)]" />
@@ -304,7 +305,7 @@ function HomePage() {
 
       {/* DARSHAN */}
       <section className="relative isolate min-h-[560px] overflow-hidden bg-brand-brown px-4 py-20 text-brand-ivory sm:px-8 lg:px-12 lg:py-28">
-        <img src={heroTempleImage} alt="Mahakaleshwar Temple and Mahakal in Ujjain" width={1200} height={900} loading="lazy" className="absolute inset-0 -z-20 size-full object-cover object-center" />
+        <img src={heroTempleImage} alt="Mahakaleshwar Temple and Mahakal in Ujjain" width={1200} height={900} loading="lazy" className="absolute inset-0 -z-20 size-full object-cover object-[28%_center] md:object-center" />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,var(--brand-brown)_8%,color-mix(in_oklab,var(--brand-brown)_74%,transparent)_55%,transparent)]" />
         <div className="mx-auto flex w-full max-w-[1240px] items-center">
           <div className="max-w-xl">

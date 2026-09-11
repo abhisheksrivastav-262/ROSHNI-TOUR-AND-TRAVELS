@@ -32,6 +32,7 @@ function UjjainDarshanPage() {
         description="Mahakal Temple और उज्जैन के धार्मिक स्थलों तक comfortable taxi — परिवार के साथ, AC / Non-AC वाहनों में, 24 घंटे उपलब्धता के साथ।"
         image={mahakalTempleImage}
         imageAlt="Mahakaleshwar Temple and Mahakal in Ujjain"
+        objectPosition="object-[30%_12%] md:object-[50%_12%]"
       >
         <Button asChild variant="brand" size="lg">
           <Link to="/book-now">

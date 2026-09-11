@@ -7,6 +7,7 @@ export function PageHero({
   description,
   image,
   imageAlt,
+  objectPosition = "object-center",
   children,
 }: {
   kicker: string;
@@ -15,6 +16,7 @@ export function PageHero({
   description?: string;
   image: string;
   imageAlt: string;
+  objectPosition?: string;
   children?: ReactNode;
 }) {
   return (
@@ -24,7 +26,7 @@ export function PageHero({
         alt={imageAlt}
         width={1600}
         height={900}
-        className="absolute inset-0 -z-20 size-full object-cover object-center"
+        className={`absolute inset-0 -z-20 size-full object-cover ${objectPosition}`}
       />
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,var(--brand-brown)_10%,color-mix(in_oklab,var(--brand-brown)_72%,transparent)_60%,color-mix(in_oklab,var(--brand-brown)_30%,transparent))]" />
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(0deg,var(--brand-brown)_0%,transparent_55%)]" />
