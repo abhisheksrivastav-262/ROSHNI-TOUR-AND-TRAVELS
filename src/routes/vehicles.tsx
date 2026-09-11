@@ -9,13 +9,13 @@ import { PageHero } from "@/components/site/PageHero";
 export const Route = createFileRoute("/vehicles")({
   head: () => ({
     meta: [
-      { title: "Taxi & Vehicle Options | Roshni Tour and Travels" },
+      { title: "Taxi & Vehicle Options | Ujjain Taxi Tour and Travels" },
       {
         name: "description",
         content:
-          "SUV, Sedan, Hatchback, Family Car — AC & Non-AC vehicle options with ROSHNI TOUR AND TRAVELS, Ujjain. Book on WhatsApp.",
+          "SUV, Sedan, Hatchback, Family Car — AC & Non-AC vehicle options with UJJAIN TAXI TOUR AND TRAVELS, Ujjain. Book on WhatsApp.",
       },
-      { property: "og:title", content: "Taxi & Vehicle Options | Roshni Tour and Travels" },
+      { property: "og:title", content: "Taxi & Vehicle Options | Ujjain Taxi Tour and Travels" },
     ],
     links: [{ rel: "canonical", href: "/vehicles" }],
   }),

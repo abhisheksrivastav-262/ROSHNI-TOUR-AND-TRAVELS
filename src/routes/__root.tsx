@@ -80,14 +80,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Roshni Tour and Travels | Ujjain Taxi Service" },
-      { name: "description", content: "24/7 AC एवं Non-AC टैक्सी सेवा, उज्जैन दर्शन और उज्जैन से ओंकारेश्वर यात्रा के लिए Roshni Tour and Travels." },
-      { name: "author", content: "Roshni Tour and Travels" },
-      { property: "og:title", content: "Roshni Tour and Travels | Ujjain Taxi Service" },
+      { title: "Ujjain Taxi Tour and Travels | Ujjain Taxi Service" },
+      { name: "description", content: "24/7 AC एवं Non-AC टैक्सी सेवा, उज्जैन दर्शन और उज्जैन से ओंकारेश्वर यात्रा के लिए Ujjain Taxi Tour and Travels." },
+      { name: "author", content: "Ujjain Taxi Tour and Travels" },
+      { property: "og:title", content: "Ujjain Taxi Tour and Travels | Ujjain Taxi Service" },
       { property: "og:description", content: "उज्जैन से ओंकारेश्वर, उज्जैन दर्शन और local sightseeing के लिए भरोसेमंद टैक्सी सेवा." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "Roshni Tour and Travels" },
+      { name: "twitter:site", content: "Ujjain Taxi Tour and Travels" },
     ],
     links: [
       {

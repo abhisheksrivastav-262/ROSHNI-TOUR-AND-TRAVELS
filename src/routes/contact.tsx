@@ -7,7 +7,6 @@ import {
   BUSINESS_NAME,
   OWNER_NAME,
   PHONE_PRIMARY,
-  PHONE_SECONDARY,
   directionsUrl,
   whatsappUrl,
 } from "@/lib/site";
@@ -16,13 +15,13 @@ import highwayImage from "@/assets/highway.jpg";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Roshni Tour and Travels | Ujjain" },
+      { title: "Contact Ujjain Taxi Tour and Travels | Ujjain" },
       {
         name: "description",
         content:
-          "Contact ROSHNI TOUR AND TRAVELS, Ujjain — call, WhatsApp or book taxi for Ujjain Darshan and Omkareshwar. 171, Indira Nagar, Ujjain (M.P.)",
+          "Contact UJJAIN TAXI TOUR AND TRAVELS, Ujjain — call, WhatsApp or book taxi for Ujjain Darshan and Omkareshwar. 171, Indira Nagar, Ujjain (M.P.)",
       },
-      { property: "og:title", content: "Contact Roshni Tour and Travels | Ujjain" },
+      { property: "og:title", content: "Contact Ujjain Taxi Tour and Travels | Ujjain" },
     ],
     links: [{ rel: "canonical", href: "/contact" }],
   }),
@@ -36,9 +35,9 @@ function ContactPage() {
         kicker="Contact Us"
         title="संपर्क करें"
         hindi="आपका अगला सफर यहीं से शुरू होता है"
-        description="उज्जैन, ओंकारेश्वर और आगे की यात्रा के लिए ROSHNI TOUR AND TRAVELS से संपर्क करें।"
+        description="उज्जैन, ओंकारेश्वर और आगे की यात्रा के लिए UJJAIN TAXI TOUR AND TRAVELS से संपर्क करें।"
         image={highwayImage}
-        imageAlt="Contact Roshni Tour and Travels for taxi booking"
+        imageAlt="Contact Ujjain Taxi Tour and Travels for taxi booking"
       />
 
       <section className="bg-brand-cream px-4 py-20 sm:px-8 lg:px-12 lg:py-28">
@@ -49,9 +48,6 @@ function ContactPage() {
             <div className="mt-8 space-y-4">
               <a href={`tel:${PHONE_PRIMARY}`} className="flex items-center gap-3 font-display text-xl font-extrabold text-brand-brown hover:text-brand-orange">
                 <Phone className="size-5 text-brand-orange" /> {PHONE_PRIMARY}
-              </a>
-              <a href={`tel:${PHONE_SECONDARY}`} className="flex items-center gap-3 font-display text-xl font-extrabold text-brand-brown hover:text-brand-orange">
-                <Phone className="size-5 text-brand-orange" /> {PHONE_SECONDARY}
               </a>
               <span className="flex items-start gap-3 text-muted-foreground">
                 <MapPin className="mt-1 size-5 shrink-0 text-brand-orange" /> {ADDRESS}
@@ -102,21 +98,12 @@ function ContactPage() {
                 <a
                   href={whatsappUrl(
                     PHONE_PRIMARY,
-                    "नमस्ते, मुझे Roshni Tour and Travels की टैक्सी बुक करनी है। कृपया जानकारी दें।",
+                    "नमस्ते, मुझे Ujjain Taxi Tour and Travels की टैक्सी बुक करनी है। कृपया जानकारी दें।",
                   )}
                   target="_blank"
                   rel="noreferrer"
                 >
                   <MessageCircle /> WhatsApp: {PHONE_PRIMARY}
-                </a>
-              </Button>
-              <Button asChild variant="brandOutline" size="lg">
-                <a
-                  href={whatsappUrl(PHONE_SECONDARY, "नमस्ते, मुझे टैक्सी बुक करनी है।")}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <MessageCircle /> WhatsApp: {PHONE_SECONDARY}
                 </a>
               </Button>
             </div>

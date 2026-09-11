@@ -1,19 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Phone } from "lucide-react";
 import { BookingForm } from "@/components/site/BookingForm";
-import { PHONE_PRIMARY, PHONE_SECONDARY } from "@/lib/site";
+import { PHONE_PRIMARY } from "@/lib/site";
 import highwayImage from "@/assets/highway.jpg";
 
 export const Route = createFileRoute("/book-now")({
   head: () => ({
     meta: [
-      { title: "Book Taxi in Ujjain | Roshni Tour and Travels" },
+      { title: "Book Taxi in Ujjain | Ujjain Taxi Tour and Travels" },
       {
         name: "description",
         content:
-          "Book Your Ride with ROSHNI TOUR AND TRAVELS — fill journey date, time, pickup, drop, KM, vehicle & passengers and send booking enquiry on WhatsApp.",
+          "Book Your Ride with UJJAIN TAXI TOUR AND TRAVELS — fill journey date, time, pickup, drop, KM, vehicle & passengers and send booking enquiry on WhatsApp.",
       },
-      { property: "og:title", content: "Book Taxi in Ujjain | Roshni Tour and Travels" },
+      { property: "og:title", content: "Book Taxi in Ujjain | Ujjain Taxi Tour and Travels" },
     ],
     links: [{ rel: "canonical", href: "/book-now" }],
   }),
@@ -73,9 +73,6 @@ function BookNowPage() {
               <p className="font-display text-sm font-extrabold text-brand-brown">Direct booking</p>
               <a href={`tel:${PHONE_PRIMARY}`} className="mt-2 block font-display text-2xl font-extrabold text-brand-orange">
                 {PHONE_PRIMARY}
-              </a>
-              <a href={`tel:${PHONE_SECONDARY}`} className="mt-1 block font-display text-2xl font-extrabold text-brand-brown">
-                {PHONE_SECONDARY}
               </a>
               <p className="mt-3 flex items-center gap-2 text-sm text-muted-foreground">
                 <Phone className="size-4" /> कॉल पर भी बुकिंग उपलब्ध

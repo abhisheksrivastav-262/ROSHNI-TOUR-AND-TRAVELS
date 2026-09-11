@@ -1,7 +1,7 @@
 import { useMemo, useState, type FormEvent } from "react";
 import { MessageCircle, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { PHONE_PRIMARY, PHONE_SECONDARY, whatsappUrl } from "@/lib/site";
+import { PHONE_PRIMARY, whatsappUrl } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 type BookingState = {
@@ -64,7 +64,7 @@ export function buildBookingMessage(f: BookingState) {
   const val = (v: string) => (v.trim() === "" ? "—" : v.trim());
   return [
     "🚕 NEW BOOKING ENQUIRY",
-    "ROSHNI TOUR AND TRAVELS",
+    "UJJAIN TAXI TOUR AND TRAVELS",
     "",
     "Customer Details",
     `Name: ${val(f.fullName)}`,
@@ -106,7 +106,7 @@ export function buildBookingMessage(f: BookingState) {
     "",
     "--------------------------------",
     "I would like to book a vehicle with",
-    "ROSHNI TOUR AND TRAVELS.",
+    "UJJAIN TAXI TOUR AND TRAVELS.",
     "Please confirm availability and fare.",
   ].join("\n");
 }
@@ -505,26 +505,15 @@ export function BookingForm({ compact = false }: { compact?: boolean }) {
           <Button type="submit" variant="dark" size="lg" className="w-full">
             Submit Booking <MessageCircle />
           </Button>
-          <div className="grid gap-3 sm:grid-cols-2">
-            <Button asChild variant="whatsapp" className="w-full">
-              <a
-                href={whatsappUrl(PHONE_PRIMARY, message)}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <MessageCircle /> WhatsApp: {PHONE_PRIMARY}
-              </a>
-            </Button>
-            <Button asChild variant="brand" className="w-full">
-              <a
-                href={whatsappUrl(PHONE_SECONDARY, message)}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <MessageCircle /> WhatsApp: {PHONE_SECONDARY}
-              </a>
-            </Button>
-          </div>
+          <Button asChild variant="whatsapp" size="lg" className="w-full">
+            <a
+              href={whatsappUrl(PHONE_PRIMARY, message)}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <MessageCircle /> WhatsApp: {PHONE_PRIMARY}
+            </a>
+          </Button>
           <a
             href={`tel:${PHONE_PRIMARY}`}
             className="flex items-center justify-center gap-2 text-sm font-bold text-brand-brown hover:text-brand-orange"

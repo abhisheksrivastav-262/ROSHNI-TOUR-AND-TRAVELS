@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 export function BrandMark() {
   return (
     <span className="grid size-10 shrink-0 place-items-center rounded-full border border-brand-gold/70 bg-brand-gold text-brand-brown shadow-[0_8px_20px_-8px_var(--brand-gold-deep)]">
-      <span className="font-display text-xl font-extrabold leading-none">R</span>
+      <span className="font-display text-xl font-extrabold leading-none">U</span>
     </span>
   );
 }
@@ -21,11 +21,11 @@ export function SiteHeader() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-brand-ivory/15 bg-brand-brown/95 text-brand-ivory shadow-[0_10px_35px_-20px_var(--brand-brown)] backdrop-blur-md">
       <div className="mx-auto flex h-[74px] w-full max-w-[1440px] items-center justify-between gap-4 px-4 sm:px-8 lg:px-12">
-        <Link to="/" className="flex min-w-0 items-center gap-3" onClick={closeMenu} aria-label="Roshni Tour and Travels home">
+        <Link to="/" className="flex min-w-0 items-center gap-3" onClick={closeMenu} aria-label="Ujjain Taxi Tour and Travels home">
           <BrandMark />
           <span className="min-w-0">
             <span className="block truncate font-display text-[0.78rem] font-extrabold tracking-[0.12em] text-brand-ivory sm:text-sm">
-              ROSHNI TOUR AND TRAVELS
+              UJJAIN TAXI TOUR AND TRAVELS
             </span>
             <span className="mt-0.5 block text-[0.62rem] tracking-[0.12em] text-brand-gold">
               उज्जैन • मध्य प्रदेश

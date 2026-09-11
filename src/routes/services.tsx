@@ -20,13 +20,13 @@ import { PageHero } from "@/components/site/PageHero";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Taxi & Travel Services in Ujjain | Roshni Tour and Travels" },
+      { title: "Taxi & Travel Services in Ujjain | Ujjain Taxi Tour and Travels" },
       {
         name: "description",
         content:
-          "Ujjain Darshan, Ujjain to Omkareshwar taxi, AC & Non-AC taxi, local sightseeing, outstation and family travel — ROSHNI TOUR AND TRAVELS.",
+          "Ujjain Darshan, Ujjain to Omkareshwar taxi, AC & Non-AC taxi, local sightseeing, outstation and family travel — UJJAIN TAXI TOUR AND TRAVELS.",
       },
-      { property: "og:title", content: "Taxi & Travel Services in Ujjain | Roshni Tour and Travels" },
+      { property: "og:title", content: "Taxi & Travel Services in Ujjain | Ujjain Taxi Tour and Travels" },
     ],
     links: [{ rel: "canonical", href: "/services" }],
   }),

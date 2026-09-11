@@ -9,13 +9,13 @@ import { PHONE_PRIMARY, whatsappUrl } from "@/lib/site";
 export const Route = createFileRoute("/ujjain-darshan")({
   head: () => ({
     meta: [
-      { title: "Ujjain Darshan Taxi Service | Roshni Tour and Travels" },
+      { title: "Ujjain Darshan Taxi Service | Ujjain Taxi Tour and Travels" },
       {
         name: "description",
         content:
-          "Ujjain Darshan taxi with ROSHNI TOUR AND TRAVELS — Mahakal Temple, religious places, family travel, AC/Non-AC vehicles, 24-hour availability.",
+          "Ujjain Darshan taxi with UJJAIN TAXI TOUR AND TRAVELS — Mahakal Temple, religious places, family travel, AC/Non-AC vehicles, 24-hour availability.",
       },
-      { property: "og:title", content: "Ujjain Darshan Taxi Service | Roshni Tour and Travels" },
+      { property: "og:title", content: "Ujjain Darshan Taxi Service | Ujjain Taxi Tour and Travels" },
     ],
     links: [{ rel: "canonical", href: "/ujjain-darshan" }],
   }),

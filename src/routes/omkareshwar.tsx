@@ -9,13 +9,13 @@ import { PHONE_PRIMARY, whatsappUrl } from "@/lib/site";
 export const Route = createFileRoute("/omkareshwar")({
   head: () => ({
     meta: [
-      { title: "Ujjain to Omkareshwar Taxi | Roshni Tour and Travels" },
+      { title: "Ujjain to Omkareshwar Taxi | Ujjain Taxi Tour and Travels" },
       {
         name: "description",
         content:
-          "Ujjain to Omkareshwar taxi — comfortable AC/Non-AC travel for family & groups, 24-hour availability, easy WhatsApp booking with ROSHNI TOUR AND TRAVELS.",
+          "Ujjain to Omkareshwar taxi — comfortable AC/Non-AC travel for family & groups, 24-hour availability, easy WhatsApp booking with UJJAIN TAXI TOUR AND TRAVELS.",
       },
-      { property: "og:title", content: "Ujjain to Omkareshwar Taxi | Roshni Tour and Travels" },
+      { property: "og:title", content: "Ujjain to Omkareshwar Taxi | Ujjain Taxi Tour and Travels" },
     ],
     links: [{ rel: "canonical", href: "/omkareshwar" }],
   }),

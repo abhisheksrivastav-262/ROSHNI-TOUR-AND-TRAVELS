@@ -7,7 +7,6 @@ import {
   NAV_LINKS,
   OWNER_NAME,
   PHONE_PRIMARY,
-  PHONE_SECONDARY,
   whatsappUrl,
 } from "@/lib/site";
 import { BrandMark } from "./SiteHeader";
@@ -82,9 +81,6 @@ export function SiteFooter() {
           <div className="mt-5 space-y-3 text-sm text-brand-ivory/65">
             <a href={`tel:${PHONE_PRIMARY}`} className="block hover:text-brand-gold">
               {PHONE_PRIMARY}
-            </a>
-            <a href={`tel:${PHONE_SECONDARY}`} className="block hover:text-brand-gold">
-              {PHONE_SECONDARY}
             </a>
             <span className="block leading-6">{ADDRESS}</span>
           </div>

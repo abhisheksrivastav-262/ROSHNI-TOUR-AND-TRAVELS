@@ -10,13 +10,13 @@ import { PHONE_PRIMARY, whatsappUrl } from "@/lib/site";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Roshni Tour and Travels | Ujjain" },
+      { title: "About Ujjain Taxi Tour and Travels | Ujjain" },
       {
         name: "description",
         content:
-          "About ROSHNI TOUR AND TRAVELS — Ujjain Darshan taxi, Ujjain to Omkareshwar travel, AC & Non-AC taxi, local sightseeing and outstation travel.",
+          "About UJJAIN TAXI TOUR AND TRAVELS — Ujjain Darshan taxi, Ujjain to Omkareshwar travel, AC & Non-AC taxi, local sightseeing and outstation travel.",
       },
-      { property: "og:title", content: "About Roshni Tour and Travels | Ujjain" },
+      { property: "og:title", content: "About Ujjain Taxi Tour and Travels | Ujjain" },
     ],
     links: [{ rel: "canonical", href: "/about" }],
   }),
@@ -39,12 +39,12 @@ function AboutPage() {
   return (
     <main className="pt-[74px]">
       <PageHero
-        kicker="About Roshni Tour and Travels"
+        kicker="About Ujjain Taxi Tour and Travels"
         title="उज्जैन की यात्रा, भरोसे के साथ"
-        hindi="ROSHNI TOUR AND TRAVELS — आपकी धार्मिक और पारिवारिक यात्राओं का साथी"
+        hindi="UJJAIN TAXI TOUR AND TRAVELS — आपकी धार्मिक और पारिवारिक यात्राओं का साथी"
         description="उज्जैन से शुरू होने वाली यात्राओं के लिए AC और Non-AC गाड़ियों की सुविधा। सरल बुकिंग — फोन या WhatsApp पर।"
         image={familyImage}
-        imageAlt="Family travelling comfortably with Roshni Tour and Travels"
+        imageAlt="Family travelling comfortably with Ujjain Taxi Tour and Travels"
       >
         <Button asChild variant="brand" size="lg">
           <Link to="/book-now">
@@ -64,10 +64,10 @@ function AboutPage() {
             <p className="section-kicker">Who we are</p>
             <div className="luxury-rule mt-4" />
             <h2 className="mt-6 font-display text-4xl font-extrabold leading-tight text-brand-brown sm:text-5xl">
-              About Roshni Tour and Travels
+              About Ujjain Taxi Tour and Travels
             </h2>
             <p className="mt-6 text-lg font-semibold leading-8 text-brand-brown-soft">
-              ROSHNI TOUR AND TRAVELS उज्जैन की टैक्सी सेवा है — उज्जैन दर्शन, ओंकारेश्वर यात्रा और
+              UJJAIN TAXI TOUR AND TRAVELS उज्जैन की टैक्सी सेवा है — उज्जैन दर्शन, ओंकारेश्वर यात्रा और
               परिवार के साथ आरामदायक सफर के लिए।
             </p>
             <p className="mt-4 leading-8 text-muted-foreground">

@@ -8,14 +8,14 @@ export function FloatingButtons() {
         href={whatsappUrl(PHONE_PRIMARY)}
         target="_blank"
         rel="noreferrer"
-        aria-label="WhatsApp Roshni Tour and Travels"
+        aria-label="WhatsApp Ujjain Taxi Tour and Travels"
         className="grid size-12 place-items-center rounded-full bg-brand-whatsapp text-brand-ivory shadow-xl transition-transform hover:scale-105"
       >
         <MessageCircle className="size-5" />
       </a>
       <a
         href={`tel:${PHONE_PRIMARY}`}
-        aria-label="Call Roshni Tour and Travels"
+        aria-label="Call Ujjain Taxi Tour and Travels"
         className="grid size-12 place-items-center rounded-full bg-brand-gold text-brand-brown shadow-xl transition-transform hover:scale-105"
       >
         <Phone className="size-5" />

@@ -26,7 +26,6 @@ const VEHICLES = [
 ] as const;
 
 const DRIVER_ALLOWANCE = 500;
-const WIDGET_CALL_NUMBER = "9875607604";
 
 const PASSENGER_OPTIONS = ["1 Passenger", "2 Passengers", "3 Passengers", "4 Passengers", "5+ Passengers"];
 
@@ -69,7 +68,7 @@ export function FareCheckWidget() {
 
     const message = [
       "🚕 NEW RIDE BOOKING",
-      "ROSHNI TOUR AND TRAVELS",
+      "UJJAIN TAXI TOUR AND TRAVELS",
       "",
       `Pickup Location: ${pickup.trim()}`,
       "",
@@ -260,8 +259,8 @@ export function FareCheckWidget() {
               Check Fare & Book Ride <ArrowRight />
             </Button>
             <Button asChild variant="brandOutline" size="lg" className="w-full !text-brand-brown">
-              <a href={`tel:${WIDGET_CALL_NUMBER}`}>
-                <Phone /> Call Now — {WIDGET_CALL_NUMBER}
+              <a href={`tel:${PHONE_PRIMARY}`}>
+                <Phone /> Call Now — {PHONE_PRIMARY}
               </a>
             </Button>
           </div>

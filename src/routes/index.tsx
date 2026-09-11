@@ -25,7 +25,6 @@ import familyImage from "@/assets/family-travel.jpg";
 import {
   ADDRESS,
   PHONE_PRIMARY,
-  PHONE_SECONDARY,
   RELIGIOUS_LINE,
   whatsappUrl,
 } from "@/lib/site";
@@ -33,13 +32,13 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Roshni Tour and Travels | Ujjain Taxi & Tour Service" },
+      { title: "Ujjain Taxi Tour and Travels | Ujjain Taxi & Tour Service" },
       {
         name: "description",
         content:
-          "ROSHNI TOUR AND TRAVELS — Ujjain taxi, Ujjain Darshan, Ujjain to Omkareshwar taxi. AC & Non-AC vehicles available 24 hours.",
+          "UJJAIN TAXI TOUR AND TRAVELS — Ujjain taxi, Ujjain Darshan, Ujjain to Omkareshwar taxi. AC & Non-AC vehicles available 24 hours.",
       },
-      { property: "og:title", content: "Roshni Tour and Travels | Ujjain Taxi & Tour Service" },
+      { property: "og:title", content: "Ujjain Taxi Tour and Travels | Ujjain Taxi & Tour Service" },
       {
         property: "og:description",
         content: "उज्जैन से ओंकारेश्वर, उज्जैन दर्शन और local sightseeing के लिए भरोसेमंद टैक्सी सेवा.",
@@ -84,7 +83,7 @@ function HomePage() {
               Your journey. Our care.
             </p>
             <h1 className="max-w-4xl font-display text-5xl font-extrabold leading-[0.98] tracking-[-0.04em] text-brand-ivory sm:text-7xl lg:text-[6.6rem]">
-              ROSHNI
+              UJJAIN TAXI
               <br />
               <span className="text-brand-gold">TOUR</span> AND TRAVELS
             </h1>
@@ -111,14 +110,10 @@ function HomePage() {
                 </a>
               </Button>
             </div>
-            <div className="mt-10 grid max-w-2xl grid-cols-1 gap-4 border-t border-brand-ivory/20 pt-5 text-sm text-brand-ivory/80 sm:grid-cols-3">
+            <div className="mt-10 grid max-w-2xl grid-cols-1 gap-4 border-t border-brand-ivory/20 pt-5 text-sm text-brand-ivory/80 sm:grid-cols-2">
               <a href={`tel:${PHONE_PRIMARY}`} className="flex items-center gap-2 font-display font-bold hover:text-brand-gold">
                 <Phone className="size-4 text-brand-gold" />
                 {PHONE_PRIMARY}
-              </a>
-              <a href={`tel:${PHONE_SECONDARY}`} className="flex items-center gap-2 font-display font-bold hover:text-brand-gold">
-                <Phone className="size-4 text-brand-gold" />
-                {PHONE_SECONDARY}
               </a>
               <span className="flex items-start gap-2">
                 <MapPin className="mt-0.5 size-4 shrink-0 text-brand-gold" />
@@ -188,7 +183,7 @@ function HomePage() {
               उज्जैन की यात्रा, अब आराम और भरोसे के साथ
             </h2>
             <p className="mt-6 text-lg font-semibold leading-8 text-brand-brown-soft">
-              ROSHNI TOUR AND TRAVELS के साथ आपकी धार्मिक और पारिवारिक यात्राएँ आसान बनती हैं।
+              UJJAIN TAXI TOUR AND TRAVELS के साथ आपकी धार्मिक और पारिवारिक यात्राएँ आसान बनती हैं।
             </p>
             <p className="mt-4 leading-8 text-muted-foreground">
               उज्जैन दर्शन, ओंकारेश्वर यात्रा, local sightseeing, outstation travel और family travel
@@ -377,7 +372,7 @@ function HomePage() {
           <p className="section-kicker text-brand-brown-soft">A trusted way to travel</p>
           <div className="luxury-rule bg-brand-brown mt-4" />
           <h2 className="mt-6 font-display text-4xl font-extrabold leading-tight text-brand-brown sm:text-5xl">
-            ROSHNI TOUR AND TRAVELS क्यों चुनें?
+            UJJAIN TAXI TOUR AND TRAVELS क्यों चुनें?
           </h2>
           <div className="mt-12 grid gap-px border border-brand-brown/20 bg-brand-brown/20 sm:grid-cols-2 lg:grid-cols-3">
             {[
