@@ -7,6 +7,7 @@ import {
   BUSINESS_NAME,
   OWNER_NAME,
   PHONE_PRIMARY,
+  PHONE_SECONDARY,
   directionsUrl,
   whatsappUrl,
 } from "@/lib/site";
@@ -49,6 +50,9 @@ function ContactPage() {
               <a href={`tel:${PHONE_PRIMARY}`} className="flex items-center gap-3 font-display text-xl font-extrabold text-brand-brown hover:text-brand-orange">
                 <Phone className="size-5 text-brand-orange" /> {PHONE_PRIMARY}
               </a>
+              <a href={`tel:${PHONE_SECONDARY}`} className="flex items-center gap-3 font-display text-xl font-extrabold text-brand-brown hover:text-brand-orange">
+                <Phone className="size-5 text-brand-orange" /> {PHONE_SECONDARY}
+              </a>
               <span className="flex items-start gap-3 text-muted-foreground">
                 <MapPin className="mt-1 size-5 shrink-0 text-brand-orange" /> {ADDRESS}
               </span>
@@ -56,7 +60,12 @@ function ContactPage() {
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
               <Button asChild variant="dark" size="lg">
                 <a href={`tel:${PHONE_PRIMARY}`}>
-                  <Phone /> Call Now
+                  <Phone /> {PHONE_PRIMARY}
+                </a>
+              </Button>
+              <Button asChild variant="dark" size="lg">
+                <a href={`tel:${PHONE_SECONDARY}`}>
+                  <Phone /> {PHONE_SECONDARY}
                 </a>
               </Button>
               <Button asChild variant="whatsapp" size="lg">

@@ -7,6 +7,7 @@ import {
   NAV_LINKS,
   OWNER_NAME,
   PHONE_PRIMARY,
+  PHONE_SECONDARY,
   whatsappUrl,
 } from "@/lib/site";
 import { BrandMark } from "./SiteHeader";
@@ -47,7 +48,12 @@ export function SiteFooter() {
             </Button>
             <Button asChild variant="brandOutline" size="sm">
               <a href={`tel:${PHONE_PRIMARY}`}>
-                <Phone /> Call Now
+                <Phone /> {PHONE_PRIMARY}
+              </a>
+            </Button>
+            <Button asChild variant="brandOutline" size="sm">
+              <a href={`tel:${PHONE_SECONDARY}`}>
+                <Phone /> {PHONE_SECONDARY}
               </a>
             </Button>
           </div>
@@ -79,8 +85,11 @@ export function SiteFooter() {
             Contact
           </p>
           <div className="mt-5 space-y-3 text-sm text-brand-ivory/65">
-            <a href={`tel:${PHONE_PRIMARY}`} className="block hover:text-brand-gold">
-              {PHONE_PRIMARY}
+            <a href={`tel:${PHONE_PRIMARY}`} className="flex items-center gap-2 hover:text-brand-gold">
+              <Phone className="size-4 text-brand-gold" /> {PHONE_PRIMARY}
+            </a>
+            <a href={`tel:${PHONE_SECONDARY}`} className="flex items-center gap-2 hover:text-brand-gold">
+              <Phone className="size-4 text-brand-gold" /> {PHONE_SECONDARY}
             </a>
             <span className="block leading-6">{ADDRESS}</span>
           </div>
@@ -92,7 +101,12 @@ export function SiteFooter() {
             </Button>
             <Button asChild variant="brandOutline" size="sm">
               <a href={`tel:${PHONE_PRIMARY}`}>
-                <Phone /> Call
+                <Phone /> {PHONE_PRIMARY}
+              </a>
+            </Button>
+            <Button asChild variant="brandOutline" size="sm">
+              <a href={`tel:${PHONE_SECONDARY}`}>
+                <Phone /> {PHONE_SECONDARY}
               </a>
             </Button>
           </div>

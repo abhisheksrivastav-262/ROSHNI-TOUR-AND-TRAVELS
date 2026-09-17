@@ -1,7 +1,7 @@
 import { useMemo, useState, type FormEvent } from "react";
 import { ArrowRight, MapPin, Phone, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { PHONE_PRIMARY, whatsappUrl } from "@/lib/site";
+import { PHONE_PRIMARY, PHONE_SECONDARY, whatsappUrl } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 const RIDE_TYPES = [
@@ -260,7 +260,12 @@ export function FareCheckWidget() {
             </Button>
             <Button asChild variant="brandOutline" size="lg" className="w-full !text-brand-brown">
               <a href={`tel:${PHONE_PRIMARY}`}>
-                <Phone /> Call Now — {PHONE_PRIMARY}
+                <Phone /> {PHONE_PRIMARY}
+              </a>
+            </Button>
+            <Button asChild variant="brandOutline" size="lg" className="w-full !text-brand-brown">
+              <a href={`tel:${PHONE_SECONDARY}`}>
+                <Phone /> {PHONE_SECONDARY}
               </a>
             </Button>
           </div>

@@ -20,12 +20,20 @@ import heroTempleImage from "@/assets/mahakal-temple.jpg";
 import omkareshwarGhatImage from "@/assets/omkareshwar-ghat.jpg";
 import yellowTaxiImage from "@/assets/yellow-taxi.jpg";
 import sedanImage from "@/assets/sedan-indigo.jpg";
-import suvImage from "@/assets/suv-grey.jpg";
 import highwayCarsImage from "@/assets/highway-cars.jpg";
 import familyMpvImage from "@/assets/family-mpv.jpg";
+import fleetAuraErtiga from "@/assets/fleet-aura-ertiga.jpg";
+import fleetAuraFront from "@/assets/fleet-aura-front.jpg";
+import fleetDzireFront from "@/assets/fleet-dzire-front.jpg";
+import fleetDzireSide from "@/assets/fleet-dzire-side.jpg";
+import fleetInnovaParking from "@/assets/fleet-innova-parking.jpg";
+import fleetInnovaRoad from "@/assets/fleet-innova-road.jpg";
+import fleetInnovaSide from "@/assets/fleet-innova-side.jpg";
+import fleetTwoCars from "@/assets/fleet-two-cars.jpg";
 import {
   ADDRESS,
   PHONE_PRIMARY,
+  PHONE_SECONDARY,
   RELIGIOUS_LINE,
   whatsappUrl,
 } from "@/lib/site";
@@ -112,10 +120,16 @@ function HomePage() {
               </Button>
             </div>
             <div className="mt-10 grid max-w-2xl grid-cols-1 gap-4 border-t border-brand-ivory/20 pt-5 text-sm text-brand-ivory/80 sm:grid-cols-2">
-              <a href={`tel:${PHONE_PRIMARY}`} className="flex items-center gap-2 font-display font-bold hover:text-brand-gold">
-                <Phone className="size-4 text-brand-gold" />
-                {PHONE_PRIMARY}
-              </a>
+              <span className="flex flex-wrap items-center gap-x-4 gap-y-2">
+                <a href={`tel:${PHONE_PRIMARY}`} className="flex items-center gap-2 font-display font-bold hover:text-brand-gold">
+                  <Phone className="size-4 text-brand-gold" />
+                  {PHONE_PRIMARY}
+                </a>
+                <a href={`tel:${PHONE_SECONDARY}`} className="flex items-center gap-2 font-display font-bold hover:text-brand-gold">
+                  <Phone className="size-4 text-brand-gold" />
+                  {PHONE_SECONDARY}
+                </a>
+              </span>
               <span className="flex items-start gap-2">
                 <MapPin className="mt-0.5 size-4 shrink-0 text-brand-gold" />
                 {ADDRESS}
@@ -270,13 +284,13 @@ function HomePage() {
           </div>
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              ["SUV", "लंबी दूरी और परिवार के लिए", suvImage],
-              ["SEDAN", "शहर और outstation travel", sedanImage],
-              ["FAMILY CAR", "परिवार और group यात्रियों के लिए", familyMpvImage],
+              ["TOYOTA INNOVA", "लंबी दूरी और परिवार के लिए", fleetInnovaRoad],
+              ["MARUTI DZIRE", "शहर और outstation travel", fleetDzireSide],
+              ["HYUNDAI AURA + ERTIGA", "परिवार और group यात्रियों के लिए", fleetAuraErtiga],
             ].map(([title, use, image]) => (
               <article key={title} className="group border border-brand-gold/35 bg-brand-cream p-3 transition-transform hover:-translate-y-1">
-                <div className="relative aspect-[1.45/1] overflow-hidden bg-white">
-                  <img src={image} alt={`${title} taxi category`} width={1200} height={900} loading="lazy" className="size-full object-contain transition-transform duration-700 group-hover:scale-105" />
+                <div className="relative aspect-[4/3] overflow-hidden bg-white">
+                  <img src={image} alt={`${title} taxi`} width={1200} height={900} loading="lazy" className="size-full object-contain transition-transform duration-700 group-hover:scale-105" />
                 </div>
                 <div className="px-2 pb-2 pt-5">
                   <div className="flex items-start justify-between gap-3">
@@ -291,6 +305,53 @@ function HomePage() {
                   </Button>
                 </div>
               </article>
+            ))}
+          </div>
+          <div className="mt-8">
+            <Button asChild variant="dark" size="lg">
+              <Link to="/vehicles">
+                View All Vehicles <ArrowRight />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* FLEET GALLERY — real car photos, fully visible (no crop) */}
+      <section className="bg-brand-cream px-4 py-20 sm:px-8 lg:px-12 lg:py-28">
+        <div className="mx-auto w-full max-w-[1240px]">
+          <p className="section-kicker">Our real fleet</p>
+          <div className="luxury-rule mt-4" />
+          <div className="mt-6 grid gap-8 lg:grid-cols-[1fr_0.75fr] lg:items-end">
+            <h2 className="font-display text-4xl font-extrabold text-brand-brown sm:text-5xl">हमारी गाड़ियों की असली तस्वीरें</h2>
+            <p className="max-w-md leading-7 text-muted-foreground lg:justify-self-end">
+              Innova, Dzire, Aura, Ertiga — साफ-सुथरी गाड़ियाँ, पूरी तस्वीर में देखें।
+            </p>
+          </div>
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              [fleetInnovaRoad, "Toyota Innova — side view"],
+              [fleetInnovaSide, "Toyota Innova — parked"],
+              [fleetInnovaParking, "Toyota Innova — front side"],
+              [fleetDzireFront, "Maruti Dzire — front"],
+              [fleetDzireSide, "Maruti Dzire — side"],
+              [fleetAuraFront, "Hyundai Aura — front"],
+              [fleetAuraErtiga, "Hyundai Aura + Maruti Ertiga"],
+              [fleetTwoCars, "Family cars ready for trip"],
+            ].map(([image, alt]) => (
+              <figure key={alt as string} className="group border border-brand-gold/35 bg-white p-2">
+                <div className="relative aspect-[4/3] overflow-hidden bg-white">
+                  <img
+                    src={image as string}
+                    alt={alt as string}
+                    width={1200}
+                    height={900}
+                    loading="lazy"
+                    className="size-full object-contain transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+                <figcaption className="px-1 py-3 text-center text-xs font-bold text-brand-brown">{alt as string}</figcaption>
+              </figure>
             ))}
           </div>
           <div className="mt-8">
@@ -419,6 +480,11 @@ function HomePage() {
               <Button asChild variant="brandOutline" size="lg" className="!text-brand-brown">
                 <a href={`tel:${PHONE_PRIMARY}`}>
                   <Phone /> {PHONE_PRIMARY}
+                </a>
+              </Button>
+              <Button asChild variant="brandOutline" size="lg" className="!text-brand-brown">
+                <a href={`tel:${PHONE_SECONDARY}`}>
+                  <Phone /> {PHONE_SECONDARY}
                 </a>
               </Button>
             </div>

@@ -4,8 +4,12 @@ import { Button } from "@/components/ui/button";
 import familyMpvImage from "@/assets/family-mpv.jpg";
 import mahakalTempleImage from "@/assets/mahakal-temple.jpg";
 import omkareshwarGhatImage from "@/assets/omkareshwar-ghat.jpg";
+import fleetAuraFront from "@/assets/fleet-aura-front.jpg";
+import fleetDzireSide from "@/assets/fleet-dzire-side.jpg";
+import fleetInnovaRoad from "@/assets/fleet-innova-road.jpg";
+import fleetTwoCars from "@/assets/fleet-two-cars.jpg";
 import { PageHero } from "@/components/site/PageHero";
-import { PHONE_PRIMARY, whatsappUrl } from "@/lib/site";
+import { PHONE_PRIMARY, PHONE_SECONDARY, whatsappUrl } from "@/lib/site";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -96,6 +100,53 @@ function AboutPage() {
           <div className="grid gap-5">
             <img src={mahakalTempleImage} alt="Mahakaleshwar Temple Ujjain" width={1200} height={900} loading="lazy" className="aspect-[16/9] w-full object-cover" />
             <img src={omkareshwarGhatImage} alt="Omkareshwar ghats and Narmada river" width={1200} height={900} loading="lazy" className="aspect-[16/10] w-full object-cover" />
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-brand-ivory px-4 py-20 sm:px-8 lg:px-12 lg:py-24">
+        <div className="mx-auto w-full max-w-[1240px]">
+          <p className="section-kicker">Our real fleet</p>
+          <div className="luxury-rule mt-4" />
+          <h2 className="mt-6 font-display text-4xl font-extrabold leading-tight text-brand-brown sm:text-5xl">
+            हमारी गाड़ियाँ
+          </h2>
+          <p className="mt-4 max-w-2xl leading-7 text-muted-foreground">
+            Innova, Dzire, Aura, Ertiga — साफ-सुथरी गाड़ियाँ, AC / Non-AC विकल्पों के साथ।
+          </p>
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              [fleetInnovaRoad, "Toyota Innova"],
+              [fleetDzireSide, "Maruti Dzire"],
+              [fleetAuraFront, "Hyundai Aura"],
+              [fleetTwoCars, "Family cars"],
+            ].map(([image, alt]) => (
+              <figure key={alt as string} className="border border-brand-gold/35 bg-white p-2">
+                <div className="relative aspect-[4/3] overflow-hidden bg-white">
+                  <img
+                    src={image as string}
+                    alt={`${alt as string} taxi`}
+                    width={1200}
+                    height={900}
+                    loading="lazy"
+                    className="size-full object-contain"
+                  />
+                </div>
+                <figcaption className="px-1 py-3 text-center text-xs font-bold text-brand-brown">{alt as string}</figcaption>
+              </figure>
+            ))}
+          </div>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Button asChild variant="dark" size="lg">
+              <Link to="/vehicles">
+                View All Vehicles <ArrowRight />
+              </Link>
+            </Button>
+            <Button asChild variant="brandOutline" size="lg" className="!text-brand-brown">
+              <a href={`tel:${PHONE_SECONDARY}`}>
+                <Phone /> {PHONE_SECONDARY}
+              </a>
+            </Button>
           </div>
         </div>
       </section>

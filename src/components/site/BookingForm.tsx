@@ -1,7 +1,7 @@
 import { useMemo, useState, type FormEvent } from "react";
 import { MessageCircle, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { PHONE_PRIMARY, whatsappUrl } from "@/lib/site";
+import { PHONE_PRIMARY, PHONE_SECONDARY, whatsappUrl } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 type BookingState = {
@@ -514,12 +514,20 @@ export function BookingForm({ compact = false }: { compact?: boolean }) {
               <MessageCircle /> WhatsApp: {PHONE_PRIMARY}
             </a>
           </Button>
-          <a
-            href={`tel:${PHONE_PRIMARY}`}
-            className="flex items-center justify-center gap-2 text-sm font-bold text-brand-brown hover:text-brand-orange"
-          >
-            <Phone className="size-4" /> Prefer to call? {PHONE_PRIMARY}
-          </a>
+          <span className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-sm font-bold text-brand-brown">
+            <a
+              href={`tel:${PHONE_PRIMARY}`}
+              className="flex items-center gap-2 hover:text-brand-orange"
+            >
+              <Phone className="size-4" /> {PHONE_PRIMARY}
+            </a>
+            <a
+              href={`tel:${PHONE_SECONDARY}`}
+              className="flex items-center gap-2 hover:text-brand-orange"
+            >
+              <Phone className="size-4" /> {PHONE_SECONDARY}
+            </a>
+          </span>
         </div>
 
         {sent && (

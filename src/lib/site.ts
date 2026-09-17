@@ -1,6 +1,8 @@
 export const BUSINESS_NAME = "UJJAIN TAXI TOUR AND TRAVELS";
 export const OWNER_NAME = "कमल भावसार";
 export const PHONE_PRIMARY = "8319098363";
+export const PHONE_SECONDARY = "9907738737";
+export const PHONES = [PHONE_PRIMARY, PHONE_SECONDARY] as const;
 export const ADDRESS = "171, Indira Nagar, Aadhar Road, Ujjain (M.P.)";
 export const RELIGIOUS_LINE = "॥ श्री हिंगलाजिकल्पस नमः ॥";
 

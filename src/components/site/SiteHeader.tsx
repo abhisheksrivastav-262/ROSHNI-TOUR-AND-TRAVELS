@@ -2,14 +2,19 @@ import { useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { ArrowRight, Menu, MessageCircle, Phone, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { NAV_LINKS, PHONE_PRIMARY, whatsappUrl } from "@/lib/site";
+import { NAV_LINKS, PHONE_PRIMARY, PHONE_SECONDARY, whatsappUrl } from "@/lib/site";
 import { cn } from "@/lib/utils";
+import logoImage from "@/assets/logo-ujjain-taxi.jpg";
 
 export function BrandMark() {
   return (
-    <span className="grid size-10 shrink-0 place-items-center rounded-full border border-brand-gold/70 bg-brand-gold text-brand-brown shadow-[0_8px_20px_-8px_var(--brand-gold-deep)]">
-      <span className="font-display text-xl font-extrabold leading-none">U</span>
-    </span>
+    <img
+      src={logoImage}
+      alt="Ujjain Taxi and Tour and Travel logo"
+      width={80}
+      height={80}
+      className="size-10 shrink-0 rounded-full border border-brand-gold/70 object-cover shadow-[0_8px_20px_-8px_var(--brand-gold-deep)]"
+    />
   );
 }
 
@@ -52,8 +57,13 @@ export function SiteHeader() {
 
         <div className="hidden items-center gap-2 md:flex">
           <Button asChild variant="brandOutline" size="sm">
-            <a href={`tel:${PHONE_PRIMARY}`}>
-              <Phone /> Call Now
+            <a href={`tel:${PHONE_PRIMARY}`} title={`Call ${PHONE_PRIMARY} / ${PHONE_SECONDARY}`}>
+              <Phone /> {PHONE_PRIMARY}
+            </a>
+          </Button>
+          <Button asChild variant="brandOutline" size="sm" className="hidden xl:inline-flex">
+            <a href={`tel:${PHONE_SECONDARY}`} title={`Call ${PHONE_SECONDARY}`}>
+              <Phone /> {PHONE_SECONDARY}
             </a>
           </Button>
           <Button asChild variant="brand" size="sm" className="font-extrabold">
@@ -103,10 +113,15 @@ export function SiteHeader() {
           <div className="mt-4 grid grid-cols-2 gap-2">
             <Button asChild variant="brandOutline">
               <a href={`tel:${PHONE_PRIMARY}`} onClick={closeMenu}>
-                <Phone /> Call
+                <Phone /> {PHONE_PRIMARY}
               </a>
             </Button>
-            <Button asChild variant="brand">
+            <Button asChild variant="brandOutline">
+              <a href={`tel:${PHONE_SECONDARY}`} onClick={closeMenu}>
+                <Phone /> {PHONE_SECONDARY}
+              </a>
+            </Button>
+            <Button asChild variant="brand" className="col-span-2">
               <a href={whatsappUrl(PHONE_PRIMARY)} target="_blank" rel="noreferrer" onClick={closeMenu}>
                 <MessageCircle /> WhatsApp
               </a>

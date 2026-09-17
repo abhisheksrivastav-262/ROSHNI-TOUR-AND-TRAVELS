@@ -2,10 +2,14 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, CarFront } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import familyMpvImage from "@/assets/family-mpv.jpg";
-import suvImage from "@/assets/suv-grey.jpg";
-import sedanImage from "@/assets/sedan-indigo.jpg";
-import swiftImage from "@/assets/swift-hatchback.jpg";
-import yellowTaxiImage from "@/assets/yellow-taxi.jpg";
+import fleetAuraFront from "@/assets/fleet-aura-front.jpg";
+import fleetAuraErtiga from "@/assets/fleet-aura-ertiga.jpg";
+import fleetDzireFront from "@/assets/fleet-dzire-front.jpg";
+import fleetDzireSide from "@/assets/fleet-dzire-side.jpg";
+import fleetInnovaSide from "@/assets/fleet-innova-side.jpg";
+import fleetInnovaParking from "@/assets/fleet-innova-parking.jpg";
+import fleetInnovaRoad from "@/assets/fleet-innova-road.jpg";
+import fleetTwoCars from "@/assets/fleet-two-cars.jpg";
 import { PageHero } from "@/components/site/PageHero";
 
 export const Route = createFileRoute("/vehicles")({
@@ -25,12 +29,14 @@ export const Route = createFileRoute("/vehicles")({
 });
 
 const VEHICLES = [
-  { title: "SUV", availability: "AC / Non-AC availability", use: "लंबी दूरी और परिवार के लिए — spacious और आरामदायक", alt: "SUV taxi", image: suvImage },
-  { title: "SEDAN", availability: "AC / Non-AC availability", use: "शहर और outstation travel के लिए comfortable विकल्प", alt: "Sedan taxi", image: sedanImage },
-  { title: "HATCHBACK", availability: "AC / Non-AC availability", use: "किफायती local travel — छोटी दूरी के लिए (Swift / Similar)", alt: "Hatchback taxi", image: swiftImage },
-  { title: "FAMILY CAR", availability: "AC / Non-AC availability", use: "परिवार और group यात्रियों के लिए उपयुक्त", alt: "Family car taxi", image: familyMpvImage },
-  { title: "AC VEHICLES", availability: "आरामदायक सफर", use: "गर्मियों और लंबी यात्रा के लिए AC आराम", alt: "AC vehicle", image: yellowTaxiImage },
-  { title: "NON-AC VEHICLES", availability: "सुविधाजनक विकल्प", use: "बजट के अनुसार यात्रा — सुविधाजनक सफर", alt: "Non-AC vehicle", image: sedanImage },
+  { title: "TOYOTA INNOVA", availability: "AC / Non-AC availability", use: "लंबी दूरी और परिवार के लिए — spacious और आरामदायक", alt: "White Toyota Innova taxi side view", image: fleetInnovaRoad },
+  { title: "INNOVA — SIDE VIEW", availability: "AC / Non-AC availability", use: "परिवार और group यात्रियों के लिए उपयुक्त", alt: "White Toyota Innova parked taxi", image: fleetInnovaSide },
+  { title: "INNOVA PARKING", availability: "AC / Non-AC availability", use: "शहर और outstation travel के लिए comfortable विकल्प", alt: "White Toyota Innova front side taxi", image: fleetInnovaParking },
+  { title: "MARUTI DZIRE", availability: "AC / Non-AC availability", use: "शहर और outstation travel के लिए comfortable sedan", alt: "White Maruti Dzire taxi front view", image: fleetDzireFront },
+  { title: "DZIRE — SIDE VIEW", availability: "AC / Non-AC availability", use: "किफायती और आरामदायक sedan सफर", alt: "White Maruti Dzire taxi side view", image: fleetDzireSide },
+  { title: "HYUNDAI AURA", availability: "AC / Non-AC availability", use: "किफायती local travel — छोटी दूरी के लिए आरामदायक", alt: "White Hyundai Aura taxi front view", image: fleetAuraFront },
+  { title: "AURA + ERTIGA", availability: "AC / Non-AC availability", use: "परिवार और group travel के लिए दो गाड़ियाँ तैयार", alt: "Hyundai Aura and Maruti Ertiga white taxis", image: fleetAuraErtiga },
+  { title: "FAMILY CARS", availability: "AC / Non-AC availability", use: "शादी, दर्शन और outstation के लिए साफ-सुथरी गाड़ियाँ", alt: "Two white family taxis on street", image: fleetTwoCars },
 ];
 
 function VehiclesPage() {
